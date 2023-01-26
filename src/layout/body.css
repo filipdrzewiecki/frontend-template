@@ -1,0 +1,16 @@
+.body {
+    background-color: white;
+    width: 100%;
+    max-width: 1366px;
+}
+
+.body_content {
+    background-color: #f8f8f8;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
