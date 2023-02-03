@@ -1,17 +1,23 @@
 import './App.css';
-import Body from './layout/Body';
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
 import mockServer from "./mock/MockServer";
+import {BrowserRouter as Router} from "react-router-dom";
+import PageBody from "./layout/PageBody";
+import history from './history';
+
 
 function App() {
     mockServer();
+
     return (
-        <div className="App">
-            <Navbar/>
-            <Body/>
-            <Footer/>
-        </div>
+        <Router location={history.location} navigator={history}  history={history}>
+            <div className="App">
+                <Navbar/>
+                <PageBody/>
+                <Footer/>
+            </div>
+        </Router>
     );
 }
 

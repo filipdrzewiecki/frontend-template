@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
-import './list.css';
-import ListProvider, {ElementContext} from "../hooks/ListProvider";
-
+import './listTwo.css';
+import ListProvider, {ElementContext} from "../hooks/PersonListProvider";
 
 const List = () => {
 
@@ -15,8 +14,8 @@ const List = () => {
 
     return (
         <div className="card_container">
-            {elements.map((el) => (
-                <div className="bicycle_card">{el.name}</div>
+            {elements.map((el, index) => (
+                <div className="row" key={index}>{el.name}</div>
             ))}
         </div>
     )

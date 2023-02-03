@@ -1,7 +1,8 @@
 import React from 'react';
 // @ts-ignore
-import Logo from '../resources/icon/page/logo.png';
+import Logo from '../resources/icon/page/LOGO.PNG';
 import './navbar.css';
+import {NavLink} from "react-router-dom";
 
 
 class Navbar extends React.Component {
@@ -28,10 +29,10 @@ class Navbar extends React.Component {
 
                 <div className="navbar_web_bottom" >
                     <div className="navbarButtons_web_bottom" >
-                        <div className="navbarButton_web_bottom"  >Your bicycles </div>
-                        <div className="navbarButton_web_bottom" >Your Parts </div>
-                        <div className="navbarButton_web_bottom"  > Bicycle catalogue </div>
-                        <div className="navbarButton_web_bottom"  > Part catalogue </div>
+                        <NavLink className="navbarButton_web_bottom"   to={"/items"}>Item 1</NavLink>
+                        <NavLink className="navbarButton_web_bottom"  to={"/v2/items"}>Item 2</NavLink>
+                        <div className="navbarButton_web_bottom"  >Item 3</div>
+                        <div className="navbarButton_web_bottom"  >Item 4</div>
                     </div>
                 </div>
 
